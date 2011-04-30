@@ -1,4 +1,4 @@
-require.paths.unshift('./vendor')
+require.paths.unshift('./vendor');
 require("coffee-script")
 require('./app.coffee')
 
