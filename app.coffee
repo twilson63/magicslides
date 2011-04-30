@@ -17,7 +17,7 @@ meryl
   }
 server = http.createServer(meryl.cgi({debug: true}))
 
-server.listen(3000)
+server.listen(80)
 
 everyone = now.initialize server
 
