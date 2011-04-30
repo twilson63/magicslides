@@ -1,7 +1,7 @@
 http = require 'http'
 connect = require 'connect'
 meryl = require 'meryl'
-coffeekup = require 'coffeekup'
+coffeekup = require './vendor/coffeekup/lib/coffeekup'
 now = require 'now'
 
 meryl
