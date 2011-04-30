@@ -1,0 +1,18 @@
+// Imports -------------------------------------------------------------------
+
+@import "base";
+@import "slideshow";
+/* Layout ------------------------------------------------------------------*/
+
+.container {
+  @include container;
+  @include susy-grid-background;
+}
+
+.content {
+  height: 600px;
+}
+
+#menu {
+  display: none;
+}
