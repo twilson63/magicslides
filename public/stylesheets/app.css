@@ -1,5 +1,10 @@
-.title-slide {
-  text-align:center;
-  margin-top:200px;
-  font-size:4em;'
+.title-slide h1 {
+  margin-top: 200px;
+  font-size: 4em;
+  text-align: center;
+}
+
+div['data-role'='content'] ul li {
+  color: white;
+  font-size: 2em;
 }

@@ -17,10 +17,6 @@ html ->
     link
       href: "/stylesheets/jquery.mobile.grids.collapsible.css"
       rel: "stylesheet"
-    # link
-    #   href: "/stylesheets/app.css"
-    #   rel: "stylesheet"
-
   body ->
     @render @content, @context
 
@@ -40,11 +36,56 @@ html ->
     type: 'text/javascript'
     src: '/javascripts/jquery.mobile.scrollview.js'
 
-  # script
-  #   type: 'text/javascript'
-  #   src: '/nowjs/now.js'
+  script
+    type: 'text/javascript'
+    src: '/nowjs/now.js'
 
-  #coffeescript ->
+  coffeescript ->
+    $("div").live 'pageshow', ->
+      $('div[data-role=content]', 'div[data-id=main]').css 'background-color', 'black'
+      # title slide
+      title_h1 = $('div[data-role=content]', 'div[data-id=main]').filter('.title-slide').children('h1')
+      title_h1.css 'text-align','center'
+      title_h1.css 'color', 'white'
+      title_h1.css 'margin-top', '200px'
+      title_h1.css 'font-size', '6em'
+
+      # bullett slide
+      bullet_h1 = $('div[data-role=content]', 'div[data-id=main]').filter('.bullet-slide').children('h1')
+      bullet_h1.css 'text-align', 'center'
+      bullet_h1.css 'color','white'
+      bullet_h1.css 'font-size','3em'
+
+      bullet_ul = $('div[data-role=content]', 'div[data-id=main]').filter('.bullet-slide').children('ul')
+      bullet_ul.css 'margin','50px'
+
+      bullet_li = $('div[data-role=content]', 'div[data-id=main]').filter('.bullet-slide').find('li')
+      bullet_li.css 'color','white'
+      bullet_li.css 'font-size', '2em'
+      bullet_li.css 'margin','20px'
+
+      #image slide
+      image_img = $('div[data-role=content]', 'div[data-id=main]').filter('.image-slide').find('img')
+      image_img.css 'margin-left', '35%'
+
+      image_h2 = $('div[data-role=content]', 'div[data-id=main]').filter('.image-slide').find('h2')
+      image_h2.css 'text-align', 'center'
+      image_h2.css 'color','white'
+      image_h2.css 'font-size','3em'
+
+
+      #code slide
+      code_h1 = $('div[data-role=content]', 'div[data-id=main]').filter('.code-slide').find('h1')
+      code_h1.css 'text-align', 'center'
+      code_h1.css 'color','white'
+      code_h1.css 'font-size','2em'
+
+      pre_code = $('div[data-role=content]', 'div[data-id=main]').filter('.code-slide').find('code')
+      pre_code.css 'text-align', 'center'
+      pre_code.css 'color', 'white'
+      pre_code.css 'font-size', '3em'
+
+
     #$("#menu-page").live 'pagecreate', ->
       # $('#slides a').bind 'click', ->
       #   now.distributeMessage @href
