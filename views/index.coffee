@@ -18,9 +18,13 @@ div 'data-role': 'panel', 'data-id': 'menu', 'data-hash': 'crumbs', 'data-contex
           a href: '#html2003', 'data-panel': 'main', -> 'HTML 2003'
         li ->
           a href: '#html2007', 'data-panel': 'main', -> 'HTML 2007'
-
         li ->
           a href: '#ujs', 'data-panel': 'main', -> 'UnObstrusive JavaScript'
+        li ->
+          a href: '#ready', 'data-panel': 'main', -> 'Ready'
+        li ->
+          a href: '#shortcut', 'data-panel': 'main', -> 'Shortcut'
+
         li ->
           a href: '#selectors', 'data-panel': 'main', -> 'Selectors'
         li ->
@@ -133,20 +137,39 @@ div 'data-role': 'panel', 'data-id': 'main', ->
           &lt;/p&gt;
           '''
 
-  div 'data-role': 'page', id: 'beautifulhtml', ->
-    div 'data-role': 'header','data-backbtn': 'false', ->
-      h1 'Beautiful Html'
-    div 'data-role': 'content', class: 'title-slide', ->
-      h1 'Beautiful HTML'
-
-
   div 'data-role': 'page', id: 'ujs', ->
     div 'data-role': 'header','data-backbtn': 'false', ->
       h1 'UnObstrusive JavaScript'
-    div 'data-role': 'content', ->
-      h1 'UnObstrusive JavaScript'
-      ul ->
-        li -> "Ability to dynamically attach script to the dom"
+    div 'data-role': 'content', class: 'title-slide', ->
+      h1 'UnObtrusive JavaScript'
+
+  div 'data-role': 'page', id: 'ready', ->
+    div 'data-role': 'header','data-backbtn': 'false', ->
+      h1 'Html 2007'
+    div 'data-role': 'content', class: 'code-slide', ->
+      h1 'Document Ready'
+      pre ->
+        code ->
+          '''
+          &lt;script&gt;
+            $(document).ready(function() {
+              ...
+            });
+          &lt;/script&gt;
+          '''
+  div 'data-role': 'page', id: 'shortcut', ->
+    div 'data-role': 'header','data-backbtn': 'false', ->
+      h1 'Html 2007'
+    div 'data-role': 'content', class: 'code-slide', ->
+      h1 'Shortcut'
+      pre ->
+        code ->
+          '''
+          &lt;script&gt;
+            $(function() {
+              ...
+            });
+          &lt;/script&gt;
 
   div 'data-role': 'page', id: 'selectors', ->
     div 'data-role': 'header','data-backbtn': 'false', ->
