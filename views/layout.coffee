@@ -85,6 +85,12 @@ html ->
       pre_code.css 'color', 'white'
       pre_code.css 'font-size', '3em'
 
+      #form slide
+      form_h1 = $('div[data-role=content]', 'div[data-id=main]').filter('.form-slide').find('h1')
+      form_h1.css 'text-align', 'center'
+      form_h1.css 'color','white'
+      form_h1.css 'font-size','2em'
+
 
     #$("#menu-page").live 'pagecreate', ->
       # $('#slides a').bind 'click', ->

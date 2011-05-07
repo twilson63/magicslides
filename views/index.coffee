@@ -13,34 +13,33 @@ div 'data-role': 'panel', 'data-id': 'menu', 'data-hash': 'crumbs', 'data-contex
         li ->
           a href: '#johnresig', 'data-panel': 'main', 'data-transition': "flip", -> 'John Resig'
         li ->
-          a href: '#html1998', 'data-panel': 'main', -> 'HTML 1998'
+          a href: '#html1998', 'data-panel': 'main', 'data-transition': "flip", -> 'HTML 1998'
         li ->
-          a href: '#html2003', 'data-panel': 'main', -> 'HTML 2003'
+          a href: '#html2003', 'data-panel': 'main', 'data-transition': "flip", -> 'HTML 2003'
         li ->
-          a href: '#html2007', 'data-panel': 'main', -> 'HTML 2007'
+          a href: '#html2007', 'data-panel': 'main', 'data-transition': "flip", -> 'HTML 2007'
         li ->
-          a href: '#ujs', 'data-panel': 'main', -> 'UnObstrusive JavaScript'
+          a href: '#ujs', 'data-panel': 'main', 'data-transition': "flip", -> 'UnObstrusive JavaScript'
         li ->
-          a href: '#ready', 'data-panel': 'main', -> 'Ready'
+          a href: '#ready', 'data-panel': 'main', 'data-transition': "flip", -> 'Ready'
         li ->
-          a href: '#shortcut', 'data-panel': 'main', -> 'Shortcut'
-
+          a href: '#shortcut', 'data-panel': 'main', 'data-transition': "flip", -> 'Shortcut'
         li ->
-          a href: '#selectors', 'data-panel': 'main', -> 'Selectors'
+          a href: '#selectors', 'data-panel': 'main', 'data-transition': "flip", -> 'Selectors'
         li ->
-          a href: '#chaining', 'data-panel': 'main', -> 'Chaining'
+          a href: '#chaining', 'data-panel': 'main', 'data-transition': "flip", -> 'Chaining'
         li ->
-          a href: '#plugins', 'data-panel': 'main', -> 'Plugins'
+          a href: '#plugins', 'data-panel': 'main', 'data-transition': "flip", -> 'Plugins'
         li ->
-          a href: '#css', 'data-panel': 'main', -> 'Stylesheets'
+          a href: '#css', 'data-panel': 'main', 'data-transition': "flip", -> 'Stylesheets'
         li ->
-          a href: '#events', 'data-panel': 'main', -> 'Events'
+          a href: '#events', 'data-panel': 'main', 'data-transition': "flip", -> 'Events'
         li ->
-          a href: '#effects', 'data-panel': 'main', -> 'Effects'
+          a href: '#effects', 'data-panel': 'main', 'data-transition': "flip", -> 'Effects'
         li ->
-          a href: '#ajax', 'data-panel': 'main', -> 'Ajax'
+          a href: '#ajax', 'data-panel': 'main', 'data-transition': "flip", -> 'Ajax'
         li ->
-          a href: '#jquery-ui', 'data-panel': 'main', -> 'JQuery UI'
+          a href: '#jquery-ui', 'data-panel': 'main', 'data-transition': "flip", -> 'JQuery UI'
 
 
 div 'data-role': 'panel', 'data-id': 'main', ->
@@ -145,7 +144,7 @@ div 'data-role': 'panel', 'data-id': 'main', ->
 
   div 'data-role': 'page', id: 'ready', ->
     div 'data-role': 'header','data-backbtn': 'false', ->
-      h1 'Html 2007'
+      h1 'Document Ready'
     div 'data-role': 'content', class: 'code-slide', ->
       h1 'Document Ready'
       pre ->
@@ -157,9 +156,10 @@ div 'data-role': 'panel', 'data-id': 'main', ->
             });
           &lt;/script&gt;
           '''
+
   div 'data-role': 'page', id: 'shortcut', ->
     div 'data-role': 'header','data-backbtn': 'false', ->
-      h1 'Html 2007'
+      h1 'shortcut'
     div 'data-role': 'content', class: 'code-slide', ->
       h1 'Shortcut'
       pre ->
@@ -170,13 +170,24 @@ div 'data-role': 'panel', 'data-id': 'main', ->
               ...
             });
           &lt;/script&gt;
-
+          '''
   div 'data-role': 'page', id: 'selectors', ->
     div 'data-role': 'header','data-backbtn': 'false', ->
       h1 'JQuery Selectors'
-    div 'data-role': 'content', ->
+    div 'data-role': 'content', class: 'form-slide', ->
       h1 'JQuery Selectors'
-      script src: "https://gist.github.com/959556.js?file=JQuery-Selectors.js"
+      div class: 'ui-grid-a', ->
+        div class: 'ui-block-a', ->
+          label 'Selector'
+          input type: 'text'
+        div class: 'ui-block-b', ->
+          button 'Select'
+
+
+      div id: 'selector-target', ->
+        p 'Paragraph 1'
+        p 'Paragraph 2'
+        p 'Paragraph 3'
 
   div 'data-role': 'page', id: 'chaining', ->
     div 'data-role': 'header','data-backbtn': 'false', ->
