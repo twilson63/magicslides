@@ -41,7 +41,8 @@ html ->
     src: '/nowjs/now.js'
 
   coffeescript ->
-    $("div").live 'pageshow', ->
+
+    $("[data-role=page]", 'div[data-id=main]').live 'pageshow', ->
       $('div[data-role=content]', 'div[data-id=main]').css 'background-color', 'black'
       # title slide
       title_h1 = $('div[data-role=content]', 'div[data-id=main]').filter('.title-slide').children('h1')
@@ -91,6 +92,14 @@ html ->
       form_h1.css 'color','white'
       form_h1.css 'font-size','2em'
 
+      $('#selector-practice-area *').css('font-size', '2em')
+
+      $('#selector-button').unbind('click').click ->
+        selector = $('#selectors input[type=text]').val()
+        $(selector, '#selector-practice-area').css 'color', 'green'
+      $('#selector-reset').unbind('click').click ->
+        $('#selectors input[type=text]').val('')
+        $('#selector-practice-area *').css 'color', 'black'
 
     #$("#menu-page").live 'pagecreate', ->
       # $('#slides a').bind 'click', ->

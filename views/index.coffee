@@ -178,16 +178,23 @@ div 'data-role': 'panel', 'data-id': 'main', ->
       h1 'JQuery Selectors'
       div class: 'ui-grid-a', ->
         div class: 'ui-block-a', ->
-          label 'Selector'
+          label style: 'color:white;font-size:1.5em;margin-top:5px;text-align:right;', -> 'Selector'
           input type: 'text'
         div class: 'ui-block-b', ->
-          button 'Select'
+          button id: 'selector-button', -> 'Select'
+          button id: 'selector-reset', -> 'Reset'
 
 
-      div id: 'selector-target', ->
+      div id: 'selector-practice-area', style: 'background-color:white;padding:20px;', ->
+        h2 'Header 2'
         p 'Paragraph 1'
-        p 'Paragraph 2'
-        p 'Paragraph 3'
+        p class: 'someclass', -> 'Paragraph 2'
+        p id: 'paragraph3', class: 'someclass', -> 'Paragraph 3'
+
+        ul ->
+          li 'List Item 1'
+          li 'List Item 2'
+          li 'List Item 3'
 
   div 'data-role': 'page', id: 'chaining', ->
     div 'data-role': 'header','data-backbtn': 'false', ->
