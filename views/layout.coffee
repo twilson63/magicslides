@@ -23,26 +23,10 @@ html ->
   script
     type: 'text/javascript'
     src: '/javascripts/jquery-1.5.2.min.js'
-  script
-    type: 'text/javascript'
-    src: '/javascripts/jquery.mobile.splitview.js'
-  script
-    type: 'text/javascript'
-    src: '/javascripts/jquery.mobile-1.0a4.1.min.js'
-  script
-    type: 'text/javascript'
-    src: '/javascripts/jquery.easing.1.3.js'
-  script
-    type: 'text/javascript'
-    src: '/javascripts/jquery.mobile.scrollview.js'
-
-  script
-    type: 'text/javascript'
-    src: '/nowjs/now.js'
 
   coffeescript ->
 
-    $("[data-role=page]", 'div[data-id=main]').live 'pageshow', ->
+    $("[data-role=page]", 'div[data-id=main]').live 'pagebeforecreate', ->
       $('div[data-role=content]', 'div[data-id=main]').css 'background-color', 'black'
       # title slide
       title_h1 = $('div[data-role=content]', 'div[data-id=main]').filter('.title-slide').children('h1')
@@ -111,4 +95,21 @@ html ->
       #   $('.slideshow').hide()
       # now.receiveMessage = (slide) ->
       #   window.location = slide
+
+  script
+    type: 'text/javascript'
+    src: '/javascripts/jquery.mobile.splitview.js'
+  script
+    type: 'text/javascript'
+    src: '/javascripts/jquery.mobile-1.0a4.1.min.js'
+  script
+    type: 'text/javascript'
+    src: '/javascripts/jquery.easing.1.3.js'
+  script
+    type: 'text/javascript'
+    src: '/javascripts/jquery.mobile.scrollview.js'
+
+  script
+    type: 'text/javascript'
+    src: '/nowjs/now.js'
 

@@ -13,7 +13,7 @@ div 'data-role': 'page', id: 'selectors', ->
 
 
     div id: 'selector-practice-area', style: 'background-color:white;padding:20px;', ->
-        h2 'Header 2'
+      h2 'Header 2'
       p 'Paragraph 1'
       p class: 'someclass', -> 'Paragraph 2'
       p id: 'paragraph3', class: 'someclass', -> 'Paragraph 3'

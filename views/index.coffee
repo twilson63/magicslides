@@ -2,7 +2,6 @@ div 'data-role': 'panel', 'data-id': 'menu', 'data-hash': 'crumbs', 'data-contex
   @render 'menu'
 
 div 'data-role': 'panel', 'data-id': 'main', ->
-  @render 'welcome'
   @render 'whoami'
   @render 'history'
   @render 'johnresig'
@@ -12,8 +11,8 @@ div 'data-role': 'panel', 'data-id': 'main', ->
   @render 'ujs'
   @render 'ready'
   @render 'shortcut'
-  @render 'seletors'
+  @render 'selectors'
   @render 'events'
   @render 'chaining'
   @render 'plugins'
-
+  @render 'welcome'
